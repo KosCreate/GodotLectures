@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cau8xirwrfoe2"]
+
+[ext_resource type="Script" path="res://Scripts/PlayerMovement.gd" id="1_qtohk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1g5cu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5poxp"]
+
+[node name="Player" type="Area2D"]
+position = Vector2(616, 302)
+scale = Vector2(3, 3)
+script = ExtResource("1_qtohk")
+spriteSize = Vector2(20, 20)
+movementSpeed = 150.0
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1g5cu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5poxp")

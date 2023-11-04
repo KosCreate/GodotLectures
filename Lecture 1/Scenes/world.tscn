@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://kxh1ekcgi200"]
+
+[ext_resource type="PackedScene" uid="uid://cau8xirwrfoe2" path="res://Scenes/player.tscn" id="1_7hkeo"]
+[ext_resource type="Texture2D" uid="uid://b5586f70cpxyy" path="res://Art/Space Background (2).png" id="1_nnc22"]
+[ext_resource type="PackedScene" uid="uid://fhtsg7wiw6ys" path="res://Scenes/planet.tscn" id="1_y41po"]
+[ext_resource type="Script" path="res://Scripts/PlanetSpawner.gd" id="2_2fqlf"]
+
+[node name="World" type="Node2D"]
+
+[node name="SpaceBackground" type="Sprite2D" parent="."]
+position = Vector2(526, 335)
+texture = ExtResource("1_nnc22")
+
+[node name="Planet Spawner" type="Node" parent="."]
+script = ExtResource("2_2fqlf")
+planetObject = ExtResource("1_y41po")
+planetPlethora = 5
+
+[node name="Player" parent="." instance=ExtResource("1_7hkeo")]
+scale = Vector2(4, 4)
+input_pickable = false

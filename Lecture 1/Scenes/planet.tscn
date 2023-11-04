@@ -1,0 +1,20 @@
+[gd_scene load_steps=12 format=3 uid="uid://fhtsg7wiw6ys"]
+
+[ext_resource type="Script" path="res://Scripts/PlanetCosmetic.gd" id="1_bgvgf"]
+[ext_resource type="Texture2D" uid="uid://b6yl31k7cwhsh" path="res://Art/kenney_planets/Planets/planet00.png" id="2_g4ul8"]
+[ext_resource type="Texture2D" uid="uid://b4u1hflh8oqk1" path="res://Art/kenney_planets/Planets/planet01.png" id="3_l3p5m"]
+[ext_resource type="Texture2D" uid="uid://yakjr32prrhx" path="res://Art/kenney_planets/Planets/planet02.png" id="4_c7fdn"]
+[ext_resource type="Texture2D" uid="uid://cdxilym3b1y6q" path="res://Art/kenney_planets/Planets/planet03.png" id="5_vl8jh"]
+[ext_resource type="Texture2D" uid="uid://to3wnxfdl5d4" path="res://Art/kenney_planets/Planets/planet04.png" id="6_da4vr"]
+[ext_resource type="Texture2D" uid="uid://ru6hr8njuyqd" path="res://Art/kenney_planets/Planets/planet05.png" id="7_c1b36"]
+[ext_resource type="Texture2D" uid="uid://dfei5di00bnot" path="res://Art/kenney_planets/Planets/planet06.png" id="8_pkss2"]
+[ext_resource type="Texture2D" uid="uid://f6uij42un0se" path="res://Art/kenney_planets/Planets/planet07.png" id="9_ioujv"]
+[ext_resource type="Texture2D" uid="uid://wvfdi3smivmm" path="res://Art/kenney_planets/Planets/planet08.png" id="10_7whoo"]
+[ext_resource type="Texture2D" uid="uid://dom6s22cxtc1f" path="res://Art/kenney_planets/Planets/planet09.png" id="11_bf2kd"]
+
+[node name="Planet" type="Node2D"]
+script = ExtResource("1_bgvgf")
+rotateSpeed = 0.07
+availablePlanets = Array[CompressedTexture2D]([ExtResource("2_g4ul8"), ExtResource("3_l3p5m"), ExtResource("4_c7fdn"), ExtResource("5_vl8jh"), ExtResource("6_da4vr"), ExtResource("7_c1b36"), ExtResource("8_pkss2"), ExtResource("9_ioujv"), ExtResource("10_7whoo"), ExtResource("11_bf2kd")])
+
+[node name="Planet_Sprite" type="Sprite2D" parent="."]

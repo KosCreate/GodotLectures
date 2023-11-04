@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://kxh1ekcgi200"]
+
+[ext_resource type="PackedScene" uid="uid://cau8xirwrfoe2" path="res://Scenes/player.tscn" id="1_7hkeo"]
+[ext_resource type="PackedScene" uid="uid://cqu5iaacf84oy" path="res://Scenes/planet.tscn" id="1_y41po"]
+[ext_resource type="Script" path="res://Scripts/PlanetSpawner.gd" id="2_2fqlf"]
+
+[node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_7hkeo")]
+scale = Vector2(4, 4)
+input_pickable = false
+
+[node name="Planet Spawner" type="Node" parent="."]
+script = ExtResource("2_2fqlf")
+planetObject = ExtResource("1_y41po")
+planetPlethora = 5
